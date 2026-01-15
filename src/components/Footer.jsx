@@ -4,14 +4,24 @@ import './Footer.css';
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="container footer-content">
-                <div className="footer-logo">Dev<span>Portfolio</span></div>
-                <div className="social-links">
-                    <a href="#" aria-label="GitHub">GH</a>
-                    <a href="#" aria-label="LinkedIn">LI</a>
-                    <a href="#" aria-label="Twitter">TW</a>
+            <div className="container footer-content glass-card">
+                <div className="footer-top">
+                    <div className="footer-logo">Mukesh<span>Sahu</span></div>
+                    <div className="social-links">
+                        <a href="#" className="social-link" aria-label="GitHub">
+                            <span>GitHub</span>
+                        </a>
+                        <a href="#" className="social-link" aria-label="LinkedIn">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" className="social-link" aria-label="Twitter">
+                            <span>Twitter</span>
+                        </a>
+                    </div>
                 </div>
-                <p className="copyright">© 2024 Alex Developer. All rights reserved.</p>
+                <div className="footer-bottom">
+                    <p className="copyright">© 2026 Mukesh Sahu. All rights reserved.</p>
+                </div>
             </div>
         </footer>
     );

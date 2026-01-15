@@ -3,16 +3,19 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     z-index: 1000;
     transition: var(--transition);
 }
 
 .navbar.scrolled {
     padding: 1rem 0;
-    background: var(--nav-bg);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(11, 17, 32, 0.85);
+    /* Deep navy with opacity */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .nav-content {
@@ -24,7 +27,9 @@
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.02em;
+    font-family: var(--font-display);
+    color: var(--text-main);
 }
 
 .logo span {
@@ -33,7 +38,7 @@
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .nav-links a {
@@ -41,21 +46,25 @@
     font-size: 0.95rem;
     color: var(--text-secondary);
     position: relative;
+    padding: 0.5rem 0;
+    transition: var(--transition);
 }
 
 .nav-links a:hover {
-    color: var(--text-main);
+    color: var(--accent-primary);
 }
 
+/* Sophisticated underline effect */
 .nav-links a::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--accent-primary);
-    transition: var(--transition);
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    transition: width 0.3s ease;
+    border-radius: var(--radius-full);
 }
 
 .nav-links a:hover::after {

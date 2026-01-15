@@ -1,11 +1,19 @@
 .about-section {
     padding: 100px 0;
-    background-color: var(--bg-color);
+    position: relative;
 }
 
 .about-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.about-text {
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
 }
 
 .about-text p {
@@ -15,42 +23,67 @@
     line-height: 1.8;
 }
 
-.about-text p:last-of-type {
-    margin-bottom: 3rem;
+.about-text p:last-child {
+    margin-bottom: 0;
 }
 
-.stats {
-    display: flex;
-    justify-content: space-between;
+.about-text .lead-text {
+    font-size: 1.25rem;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    padding: 2rem;
-    background: var(--card-bg);
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .stat-item {
     text-align: center;
+    padding: 2rem 1rem;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    background: rgba(56, 189, 248, 0.1);
+    border-color: var(--accent-primary);
 }
 
 .stat-number {
     display: block;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 800;
-    color: var(--accent-primary);
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     margin-bottom: 0.5rem;
+    line-height: 1;
 }
 
 .stat-label {
     font-size: 0.9rem;
     color: var(--text-secondary);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
 }
 
-@media (max-width: 600px) {
-    .stats {
-        flex-direction: column;
-        gap: 2rem;
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-text {
+        padding: 1.5rem;
     }
 }

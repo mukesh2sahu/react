@@ -16,8 +16,8 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-content">
-        <a href="#hero" className="logo">Dev<span>Portfolio</span></a>
-        
+        <a href="#hero" className="logo">Mukesh<span>Sahu</span></a>
+
         <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
